@@ -1,0 +1,78 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+h1{
+    color:red;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: pink;
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+img{
+    width:30vw;
+    height: 30vh;
+}
+
+#red-ball{
+    background-color: pink;
+    width: 30px;
+    height:30px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+    animation-name: red-ballMove;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+nav:hover{
+    background-color: red;
+}
+
+h1:hover{
+    color: lightpink;
+}
+
+@keyframes red-ballMove{
+
+    from{
+        margin: 0;
+    }
+
+    25%{
+        margin-left: 75%;
+        margin-top: 0%;
+    }
+
+    50%{
+        margin-left: 75%;;
+        margin-top: 50%;
+    }
+
+    75%{
+        margin-left: 0%;
+        margin-top: 50%;
+    }
+
+    to{
+        margin: 0;
+    }
+}
