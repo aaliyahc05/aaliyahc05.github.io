@@ -1,0 +1,49 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+p{
+    color: white;
+    text-align: center;
+}
+
+h2{
+    color: white;
+    text-align: center;
+}
+
+button{
+    background-color: #fa6ee0;
+    height: 55px;
+    width: 200px;
+}
+
+button:hover{
+    background-color: #8fdaff; 
+}
+
+dl{
+    text-align: center;
+    color: white;
+}
+
+#box1{
+    margin:auto;
+    width: 800px;
+    height: 50px;
+    border: solid #fa6ee0;
+    padding-bottom: 2.5%;
+}
+
+@media screen and (max-width: 499px){
+   #box1{
+        display:flex;
+        
+   }
+
+}
