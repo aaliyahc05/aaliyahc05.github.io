@@ -5,27 +5,59 @@ body{
 h1{
     color: white;
     text-align: center;
+   
 }
 
 p{
     color: white;
-    text-align: center;
+    
 }
 
 h2{
     color: white;
-    text-align: center;
+    
 }
+
+.featured{
+    font-size: smaller;
+    font-weight: 200;
+    font-family: monospace;
+    display:flex;
+    gap: 20px;
+    
+}
+
+.description{
+    font-size: smaller;
+    font-family: Geneva;
+}
+
+/* .container {
+     border: 1px solid black;
+    position: relative;
+}
+
+button {
+    background-color: #fa6ee0;
+    position: absolute;
+    height: 55px;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}  */
 
 button{
     background-color: #fa6ee0;
+    margin-left: 45.5%;
+    top: 50%;
     height: 55px;
-    width: 200px;
-}
+    width: 150px;
+    display: block;
+} 
 
 button:hover{
     background-color: #8fdaff; 
-}
+} 
 
 dl{
     text-align: center;
@@ -42,7 +74,18 @@ dl{
 
 @media screen and (max-width: 499px){
    #box1{
-        display:flex;
+    font-size: smaller;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
    }
+
+    button{
+        margin-left: 37.75%;
+    }
+
+    .description{
+        font-size: x-small;
+    }
 
 }
