@@ -74,7 +74,7 @@ dl{
 
 @media screen and (max-width: 499px){
    #box1{
-    font-size: smaller;
+    font-size: x-small;
     flex-direction: column;
     width: 100%;
     margin: 0 auto;
