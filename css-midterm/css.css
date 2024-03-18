@@ -82,6 +82,8 @@ dl{
 
     button{
         margin-left: 37.75%;
+        width: 100px; 
+        height: 45px;
     }
 
     .description{
