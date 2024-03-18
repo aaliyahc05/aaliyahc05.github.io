@@ -81,6 +81,7 @@ dl{
    }
 
     button{
+        display : flex;
         margin-left: 37.75%;
         width: 90px; 
         height: 45px;
