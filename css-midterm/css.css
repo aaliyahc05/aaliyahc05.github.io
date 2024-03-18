@@ -86,6 +86,7 @@ dl{
         width: 90px; 
         height: 45px;
         font-size: large;
+        text-align: center;
     }
 
     .description{
