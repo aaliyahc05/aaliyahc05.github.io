@@ -80,14 +80,14 @@ dl{
     margin: 0 auto;
    }
 
-    button{
+    .container{
         margin-left: 37.75%;
         width: 100px; 
         height: 45px;
     }
 
     .description{
-        font-size: x-small;
+        font-size: xx-small;
     }
 
 }
