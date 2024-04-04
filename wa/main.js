@@ -12,7 +12,7 @@ function randomValueFromArray(array){
 
 const storyText = "It was 94 fahrenheit outside in Narnia, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Aaliyah saw the whole thing, but was not surprised — :insertx: weighs 9000 pounds, and it was a hot day."
 
-const insertX = ["Lana Del Rey", "Big Daddy","James Madison"];
+const insertX = ["Lana Del Rey", "Obama","James Madison"];
 const insertY = ["their minecraft world", "Legoland", "mexico"];
 const insertZ = ["spontaneously combusted","magically poofed","turned into a butterfly and flew away"];
 
