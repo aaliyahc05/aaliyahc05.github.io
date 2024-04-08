@@ -2,21 +2,29 @@ const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
 const btn = document.querySelector('button');
-const overlay = document.querySelector('.overlay');
+var overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
-const alts =["nelly","jelly","sky","serena","hailey","bella"];
+const images = ['pics1.jpeg', `pics2.jpeg`, `pics3.jpeg`, `pics4.jpeg`, `pics6.jpeg`];
+const alts = {
+  'pics1.jpeg' : 'nelly',
+  'pics2.jpeg' : 'sky',
+  'pics3.jpeg' : 'farrand',
+  'pics6.jpeg' : 'friends',
+  'pics4.jpeg' : 'mountain'
+}
 
 /* Looping through images */
-    function pictureLoop(){
-        var i; 
-        for(i = 0; i < 6; i++){
-            var newImage = document.createElement('img');
-            newImage.setAttribute('src',"img" + [i+1] + ".JPG/jpeg");
-            newImage.setAttribute('alt', alts[i]);
-            thumbBar.appendChild(newImage);
-        }
-    }
+for (const image of images) {
+  const newImage = document.createElement('img');
+  newImage.setAttribute('src', `img/${image}`);
+  newImage.setAttribute('alt', alts[image]);
+  thumbBar.appendChild(newImage);
+  newImage.addEventListener('click', e => {
+    displayedImage.src = e.target.src;
+    displayedImage.alt = e.target.alt;
+  });
+}
 
 /* Wiring up the Darken/Lighten button */
 
