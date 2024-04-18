@@ -1,70 +1,61 @@
-const btn = document.querySelector("#js-new-quote");
-btn.addEventListener('click', getQuote);
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.querySelector("#js-new-quote");
+  const button2 = document.querySelector("#js-new-author")
+  const quote = document.querySelector("#js-quote-text");
+  const cite = document.querySelector("#js-quote-author");
 
-const answerBtn = document.querySelector("#js-tweet");
-answerBtn.addEventListener('click', shareQuote);
-
-const answerText = document.querySelector("#js-answer-text");
-
-let answer = '';
-
-
-// const endpoint = "https://wordsapiv1.p.rapidapi.com/words/hatchback/typeOf";
-
-async function getQuote(){
-    const axios = require('axios');
-
-    const options = {
-      method: 'GET',
-      url: 'https://wordsapiv1.p.rapidapi.com/words/hatchback/typeOf',
-      headers: {
-        'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
-        'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
+  async function getQuote() {
+      const response = await fetch("https://api.quotable.io/random");
+      const data = await response.json();
+      if (response.ok) {
+          quote.textContent = data.content;
+      }else{
+          quote.textContent = "failed to fetch quote :(";
+          console.log(data);
       }
-    };
-    
-    try {
-        const response = await axios.request(options);
-        console.log(response.data);
-    } catch (error) {
-        console.error(error);
-    }
-}
+  }
+  button.addEventListener("click", getQuote);
+  getQuote();
 
-function displayQuote(quote){
-    const quoteText = document.querySelector("#js-quote-text");
-    quoteText.textContent = quote;
-}
 
-const twitterURL = "https://twitter.com/intent/tweet/";
-const linkTarget = '_top';
-const windowOptions = 'menubar=no,status=no,height=750,width=500';
+async function getAuthor() {
+  const response = await fetch("https://api.quotable.io/random");
+  const data = await response.json();
+  if (response.ok) {
+      cite.textContent = data.author;
+  }else{
+      cite.textContent = "failed to fetch author :(";
+      console.log(data);
+  }
+}
+button2.addEventListener("click", getAuthor);
+getAuthor();
+
+});
+
 
 function extractQuote(){
-console.log(document.querySelector('#js-quote-text').textContent);
-return document.querySelector('#js-quote-text').textContent;
-
+  console.log(document.querySelector('#js-quote-text').textContent);
+  return document.querySelector('#js-quote-text').textContent;
+  
 }
 
 function extractAuthor(){
-console.log(document.querySelector('#js-quote-author').textContent);
-return document.querySelector('#js-quote-author').textContent;
+  console.log(document.querySelector('#js-quote-author').textContent);
+  return document.querySelector('#js-quote-author').textContent;
 }
 
-function openTwitterWindow() {
-const quote = extractQuote();
-const author = extractAuthor();
-const twitterQuery = `text=${encodeURIComponent(`"${quote}" - ${author}`)}&url=`;
-return window.open(`${twitterURL}?${twitterQuery}&`, linkTarget, windowOptions);
-}
+// function printAuthor() {
+//   const author = extractAuthor();
+//   const twitterButton = document.querySelector('#js-quote-author');
+//   twitterButton.addEventListener('click', () => openTwitterWindow());
+// }
 
-function shareQuote() {
-const twitterButton = document.querySelector('#js-tweet-button');
-twitterButton.addEventListener('click', () => openTwitterWindow());
-}
+// function shareQuote() {
+//   const twitterButton = document.querySelector('#js-quote-author');
+//   twitterButton.addEventListener('click', () => openTwitterWindow());
+// }
 
-shareQuote();
-
-getQuote();
+// shareQuote();
 
 
