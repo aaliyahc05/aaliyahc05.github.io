@@ -1,0 +1,42 @@
+
+#right{
+    position: relative;
+    width: 70px;
+    height: 20px; 
+}
+#right:hover{
+    background-color:lightgreen ;
+}
+
+p{
+    color: lightgreen;
+}
+
+body{
+    background-color: darkgreen;
+}
+
+#wrong{
+    position: relative;
+    width: 70px;
+    height: 20px; 
+}
+#wrong:hover{
+    background-color:lightgreen ;
+}
+#wrong1{
+    position: relative;
+    width: 70px;
+    height: 20px; 
+}
+#wrong1:hover{
+    background-color:lightgreen ;
+}
+#wrong2{
+    position: relative;
+    width: 70px;
+    height: 20px; 
+}
+#wrong2:hover{
+    background-color:lightgreen ;
+}
