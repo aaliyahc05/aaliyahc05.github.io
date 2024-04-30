@@ -6,10 +6,7 @@ const rbutton = document.querySelector("#right-button");
 
 rbutton.addEventListener('click', changeVolume);
 function changeVolume() {
-    if (currentVolume < 90) {
-        currentVolume = currentVolume + 10;
-        sound.volume = currentVolume / 100;
-    }
+   
   }
 
 button.addEventListener('click', myFunc);
