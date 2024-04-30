@@ -4,14 +4,11 @@ const button3 = document.querySelector("#wrong-button2");
 const rbutton = document.querySelector("#right-button");
 
 
-rbutton.addEventListener('click', volumeUp);
-function volumeUp() {
+rbutton.addEventListener('click', changeVolume);
+function changeVolume() {
     if (currentVolume < 90) {
         currentVolume = currentVolume + 10;
-        currentVolume = (parseFloat(currentVolume) + 0.1).toFixed(1); 
-      sound.volume = currentVolume / 100;
-      var $toastContent = $('<span>Volume '+ currentVolume+  ' %' + '</span>' );
-      Materialize.toast($toastContent, 2000);
+        sound.volume = currentVolume / 100;
     }
   }
 
