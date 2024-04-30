@@ -13,7 +13,6 @@ function changeVolume() {
   }
 
 button.addEventListener('click', myFunc);
-let result = document.getElementById('wrong');
 
 function changeColor(color) {
     document.body.style.background = color;
