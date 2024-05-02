@@ -10,6 +10,8 @@
 
 p{
     color: lightgreen;
+    text-align: center;
+    
 }
 
 body{
@@ -40,3 +42,10 @@ body{
 #wrong2:hover{
     background-color:lightgreen ;
 }
+
+#progressBar {
+    width: 25%;
+   height: 8px;
+   background-color: #666666;
+   display: inline-block;
+   }
