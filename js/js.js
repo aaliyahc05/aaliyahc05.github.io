@@ -1,20 +1,14 @@
-const button = document.querySelector("#wrong-button");
-const button2 = document.querySelector("#wrong-button1")
-const button3 = document.querySelector("#wrong-button2");
-const rbutton = document.querySelector("#right-button");
+const button1 = document.querySelector(".button1");
+button1.addEventListener('click', changeText);
 
 
-rbutton.addEventListener('click', changeVolume);
-function changeVolume() {
-   
-  }
+const button2 = document.getElementById("button2");
+button2.addEventListener('click', changeText);
 
-button.addEventListener('click', myFunc);
+const p = document.querySelector("p");
 
-function changeColor(color) {
-    document.body.style.background = color;
-}
-
-function myFunc() {
-    changeColor('pink');
+function changeText(){
+    // alert('test successful!');
+    const head = prompt('change the volume (numbers only)');
+    p.textContent = head; 
 }

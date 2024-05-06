@@ -8,9 +8,16 @@
     background-color:lightgreen ;
 }
 
+h1{
+    color: lightgreen;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    
+}
 p{
     color: lightgreen;
     text-align: center;
+    font-size: 30px;
     
 }
 
@@ -18,34 +25,9 @@ body{
     background-color: darkgreen;
 }
 
-#wrong{
+.button1{
     position: relative;
-    width: 70px;
-    height: 20px; 
 }
-#wrong:hover{
+.button1:hover{
     background-color:lightgreen ;
 }
-#wrong1{
-    position: relative;
-    width: 70px;
-    height: 20px; 
-}
-#wrong1:hover{
-    background-color:lightgreen ;
-}
-#wrong2{
-    position: relative;
-    width: 70px;
-    height: 20px; 
-}
-#wrong2:hover{
-    background-color:lightgreen ;
-}
-
-#progressBar {
-    width: 25%;
-   height: 8px;
-   background-color: #666666;
-   display: inline-block;
-   }
